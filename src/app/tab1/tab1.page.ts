@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/dot-notation */
 import { Component } from '@angular/core';
 import { ApiService } from '../services/api.service';
 
@@ -10,7 +11,7 @@ export class Tab1Page {
 
   constructor(private api: ApiService) {
     this.api.buscarPrevisao().subscribe(dados => {
-      console.log(dados);
+      console.log(dados['coord']['lat']);
     });
   }
 
